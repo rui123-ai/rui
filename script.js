@@ -92,6 +92,8 @@ if (galleryItems && popup && popupImg && popupCaption && closePopup) {
             popupImg.alt = title;
             popupCaption.innerHTML = `<strong>${title}</strong><br>${year}`;
             popup.classList.add('active');
+            popupImg.classList.add('popup-animate');
+            setTimeout(() => popupImg.classList.remove('popup-animate'), 400);
         });
     });
     closePopup.addEventListener('click', () => {

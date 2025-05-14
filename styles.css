@@ -368,6 +368,21 @@ footer {
     opacity: 1;
 }
 
+.popup-animate {
+    animation: popup-zoom-in 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+@keyframes popup-zoom-in {
+    from {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .close-popup {
     color: #fff;
     font-size: 2.5rem;
