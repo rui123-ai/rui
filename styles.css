@@ -319,4 +319,52 @@ footer {
 
 .courses-list li:last-child {
     margin-bottom: 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.close-popup {
+    color: #fff;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 2100;
+    transition: color 0.2s;
+}
+.close-popup:hover {
+    color: #3498db;
+}
+
+.popup-caption {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
 } 

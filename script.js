@@ -73,4 +73,35 @@ const animateOnScroll = () => {
 };
 
 window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll); 
+window.addEventListener('load', animateOnScroll);
+
+// Popup de visualização de imagem
+const galleryItems = document.querySelectorAll('.gallery-item');
+const popup = document.getElementById('popup');
+const popupImg = document.querySelector('.popup-img');
+const popupCaption = document.querySelector('.popup-caption');
+const closePopup = document.querySelector('.close-popup');
+
+if (galleryItems && popup && popupImg && popupCaption && closePopup) {
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imgSrc = item.getAttribute('data-img');
+            const title = item.getAttribute('data-title');
+            const year = item.getAttribute('data-year');
+            popupImg.src = imgSrc;
+            popupImg.alt = title;
+            popupCaption.innerHTML = `<strong>${title}</strong><br>${year}`;
+            popup.classList.add('active');
+        });
+    });
+    closePopup.addEventListener('click', () => {
+        popup.classList.remove('active');
+        popupImg.src = '';
+    });
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.classList.remove('active');
+            popupImg.src = '';
+        }
+    });
+} 
