@@ -361,8 +361,6 @@ footer {
     transform: scale(0.95);
     opacity: 0;
     transition: transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1);
-    position: relative;
-    top: 0;
 }
 
 .popup.active .popup-img {
@@ -390,8 +388,6 @@ footer {
     text-align: center;
     margin-top: 10px;
     font-weight: 500;
-    position: relative;
-    top: 0;
 }
 
 @media (max-width: 768px) {
