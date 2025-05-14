@@ -134,7 +134,9 @@ nav {
 /* Seção Portfólio */
 .portfolio {
     padding: 100px 0;
-    background-color: #f8f9fa;
+    background-color: rgba(52, 152, 219, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .portfolio h2 {
