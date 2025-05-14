@@ -340,10 +340,15 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(.4,0,.2,1);
 }
 
 .popup.active {
     display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .popup-img {
@@ -352,6 +357,14 @@ footer {
     border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     margin-bottom: 20px;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+.popup.active .popup-img {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .close-popup {
